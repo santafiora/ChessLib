@@ -109,11 +109,12 @@ var moveList = game.Pos.GenerateMoves();
 
 * Basic chess engine (search + evaluation) w. UCI support
 
-Detailed Documentation for Newbies and Beginners
+## More Detailed Documentation for Newbies and Beginners
 
 Unit Test "FoolsCheckMateTests.cs"
 
-   static void Main(string[] args)
+ Implementation in a Console App
+ static void Main(string[] args)
 
             //public const string StartPositionFen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
