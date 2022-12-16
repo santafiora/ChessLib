@@ -114,8 +114,9 @@ var moveList = game.Pos.GenerateMoves();
 Unit Test "FoolsCheckMateTests.cs"
 
  Implementation in a Console App
- static void Main(string[] args)
+ 
 
+             static void Main(string[] args)
             //public const string StartPositionFen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
         {
