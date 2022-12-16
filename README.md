@@ -108,3 +108,47 @@ var moveList = game.Pos.GenerateMoves();
 ## Planned
 
 * Basic chess engine (search + evaluation) w. UCI support
+
+Detailed Documentation for Newbies and Beginners
+
+Unit Test "FoolsCheckMateTests.cs"
+
+   static void Main(string[] args)
+
+            //public const string StartPositionFen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+
+        {
+            //var game = GameFactory.Create(Fen.StartPositionFen);
+            var game = GameFactory.Create(Fen.StartPositionFen);
+            var position = game.Pos;
+            var state = new State();
+
+            var moves = new[]
+            {
+                Move.Create(Square.F2, Square.F3),
+                Move.Create(Square.E7, Square.E5),
+                Move.Create(Square.G2, Square.G4),
+                Move.Create(Square.D8, Square.H4)
+            };
+
+            foreach (var move in moves)
+                position.MakeMove(move, state);
+
+            if (position.InCheck)
+            {
+                var resultingMoves = position.GenerateMoves();
+                if (resultingMoves.Length == 0)
+                {
+                    Console.WriteLine("Checkmate!");
+                }
+                else
+                {
+                    Console.WriteLine("In check, but not checkmate.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Not in check.");
+            }
+            Console.ReadKey();
+        }
