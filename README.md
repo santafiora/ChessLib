@@ -115,8 +115,18 @@ Unit Test "FoolsCheckMateTests.cs"
 
  Implementation in a Console App
  
+using Rudzoft.ChessLib;
+using Rudzoft.ChessLib.Factories;
+using Rudzoft.ChessLib.Fen;
+using Rudzoft.ChessLib.MoveGeneration;
+using Rudzoft.ChessLib.Types;
 
-             static void Main(string[] args)
+namespace ConsoleAppFoolsCheckMateTests
+{
+    class Program
+    {
+        static void Main(string[] args)
+
             //public const string StartPositionFen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
         {
@@ -154,3 +164,5 @@ Unit Test "FoolsCheckMateTests.cs"
             }
             Console.ReadKey();
         }
+    }
+}
