@@ -164,9 +164,43 @@ namespace ConsoleAppFoolsCheckMateTests
             {
                 Console.WriteLine("Not in check.");
             }
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+Unit Test "FenTests.cs"
+
+ Implementation in a C# Console App 
 
 
+```c#
+using Rudzoft.ChessLib.Factories;
+using Rudzoft.ChessLib.Fen;
+using Rudzoft.ChessLib.Types;
 
+namespace ConsoleAppFenTests.cs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         
+            /*  Test Fens To Use but you can Try many other
+             *  rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+             *  q3k1nr/1pp1nQpp/3p4/1P2p3/4P3/B1PP1b2/B5PP/5K2 b k - 0 17
+             */
+
+            Console.WriteLine("Enter a FEN string: ");
+            var fen = Console.ReadLine();
+
+            var game = GameFactory.Create(fen);
+            var actualFen = game.GetFen().ToString();
+
+            Console.WriteLine("The FEN string for the current position is: " + actualFen);
+
+            Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
     }
