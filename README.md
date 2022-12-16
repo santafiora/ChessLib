@@ -114,7 +114,9 @@ var moveList = game.Pos.GenerateMoves();
 Unit Test "FoolsCheckMateTests.cs"
 
  Implementation in a Console App
+
  
+
 using Rudzoft.ChessLib;
 using Rudzoft.ChessLib.Factories;
 using Rudzoft.ChessLib.Fen;
